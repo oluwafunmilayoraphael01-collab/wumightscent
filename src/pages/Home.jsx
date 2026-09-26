@@ -10,10 +10,10 @@ const Home = () => {
 
       
       <div
-        className="w-full h-[500px] bg-cover bg-center bg-no-repeat "
+        className="w-full h-[300px] bg-cover bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${perfumeBg})` }}
       >
-        <div className="bg-black/70 h-full px-11 py-20">
+        <div className="bg-black/70 h-full px-11 ">
 
           <p className="text-amber-500 tracking-[3px]">
             PREMIUM FRAGRANCES
@@ -52,7 +52,7 @@ const Home = () => {
           _____________
         </p>
 
-        <div className="flex justify-center gap-20 flex-wrap gap-6 px-8 mt-8">
+        <div className=" grid grid-cols-2 md:flex justify-center  flex-wrap gap-20 px-8 mt-8">
 
           {perfumes.map((perfume) => (
             <div
@@ -81,7 +81,7 @@ const Home = () => {
         </div>
 
       </section>
-      <div className="bg-amber-200 flex hv-35 gap-6  py-4  justify-center ">
+      <div className="bg-amber-200 flex hv-35   py-4  justify-center ">
 <div className="px-5">
   <div className="px-4"><ShieldCheck /></div>
   <h1 className="font-bold">Authentic Product</h1>

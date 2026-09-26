@@ -3,17 +3,17 @@ import perfumeBg from "../assets/perfumebg.jpg";
 const About = () => {
   return (
     <div>
-      <div className="text-center font-bold text-2xl  hv-20 bg-contain bg-center bg-no-repeat "
+      <div className="text-center font-bold text-xl  hv-20 bg-contain bg-center bg-no-repeat "
               style={{ backgroundImage: `url(${perfumeBg})` }}>  <div className="bg-black/70 h-16 ">
                 <h1 className="text-amber-600 font-extrabold">About Us</h1>
       <p className="text-white">Our story,Our Passion, Your signature scent</p> </div> </div>
-    <div className="flex gap-10 py-10 px-9">
-      <div><img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:250,cw:1500,ch:1125,q:80,w:1500/dG2xKfejHrshECstHNiwn.jpg" alt="ing" className="h-100 w-300" /></div>
+    <div className="flex gap-5 py-10 px-9">
+      <div><img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:250,cw:1500,ch:1125,q:80,w:1500/dG2xKfejHrshECstHNiwn.jpg" alt="ing" className=" h-70 w-400 md:h-100 md:w-300" /></div>
       
       <div className="md:py-20">
         <h1 className="text-2xl"> Our Story</h1>
-        <p>WumiScent was born from a passion for <br />beautiful fragrances and the desire to help <br /> people feel confident, elegant, and <br />unforgettable. What started as a simple <br />love for amazing scents grew into a vision to make quality fragrances accessible to everyone. 
-At WumiScent, every scent is chosen with you in mind  whether you want something soft and sweet, bold and <br />captivating, or fresh and refreshing. <br />
+        <p>WumiScent was born from a passion for beautiful fragrances and the desire to help  people feel confident, elegant, and unforgettable. What started as a simple love for amazing scents grew into a vision to make quality fragrances accessible to everyone. 
+At WumiScent, every scent is chosen with you in mind  whether you want something soft and sweet, bold and captivating, or fresh and refreshing. 
 
 WumiScent was born from passion. Built with love. Made to leave a lasting impression.</p></div>
     </div>

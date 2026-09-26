@@ -17,7 +17,7 @@ const App = () => {
   <Route path="/Collection" element={<Collection/>} />
   <Route path="/Contact" element={<Contact/>} />
 </Routes>
-<div className="hv-30 gap-30 justify-center bg-black flex text-amber-800 px-8">
+<div className="hv-30 md:gap-30 justify-center bg-black flex text-amber-800 px-8">
   <div>
     <h1 className="font-bold text-2xl ">Wumight Scent</h1>
     <p>more just a fragrance. <br /> it's a life style </p>
