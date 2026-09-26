@@ -6,16 +6,16 @@ import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   return (
-    <div className="w-full scroll-fade">
+    <div className="">
 
       
       <div
         className="w-full h-[300px] bg-cover bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${perfumeBg})` }}
       >
-        <div className="bg-black/70 h-full px-11 ">
+        <div className="bg-black/70 h-full px-5 ">
 
-          <p className="text-amber-500 tracking-[3px]">
+          <p className="text-amber-500 tracking-[2px]">
             PREMIUM FRAGRANCES
           </p>
 
@@ -52,23 +52,23 @@ const Home = () => {
           _____________
         </p>
 
-        <div className=" grid grid-cols-2 md:flex justify-center  flex-wrap gap-20 px-8 mt-8">
+        <div className=" grid grid-cols-2 md:flex justify-center  flex-wrap gap-2 px-2 mt-8">
 
           {perfumes.map((perfume) => (
             <div
           
-              className="w-[200px] border rounded-lg overflow-hidden shadow-md "
+              className="md:w-[200px] border rounded-lg overflow-hidden shadow-md "
             >
 
               <img
                 src={perfume.image}
                 alt={perfume.name}
-                className=" h-[200px] object-cover object-cover object-top rounded-t-lg"
+                className="  object-cover md:h-[300px] object-top rounded-t-lg"
                 
 
               />
 
-              <div className="p-4">
+              <div className="">
                 <h2 className="font-bold text-lg">
                   {perfume.name}
                 </h2>
@@ -81,7 +81,7 @@ const Home = () => {
         </div>
 
       </section>
-      <div className="bg-amber-200 flex hv-35   py-4  justify-center ">
+      <div className="bg-amber-200 grid grid-cols-4   py-4  ">
 <div className="px-5">
   <div className="px-4"><ShieldCheck /></div>
   <h1 className="font-bold">Authentic Product</h1>

@@ -33,8 +33,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full px-4 py-10 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section className=" px-4 py-4 overflow-hidden">
+      <div className="max-w-xl mx-aut">
 
         <div className="grid  grid-cols-2 gap-10">
 
@@ -131,9 +131,9 @@ const Contact = () => {
                 </h2>
 
                 <p className="text-gray-600">
-                  wumightscent@gmail.com
+                  wumightscent <br />@gmail.com
                   <br />
-                  We'll reply within 24 hours
+                  We'll reply within <br />24 hours
                 </p>
               </div>
             </div>

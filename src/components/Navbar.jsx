@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <nav className="sticky top-0 z-50 py-2 flex h-14 bg-black justify-between items-center px-9">
+      <nav className="  flex h-14 bg-black justify-between items-center gap-2">
 
         <h1 className="font-bold text-blue-500">
           WUMIGHT SCENT
         </h1>
 
-        <div className="text-amber-50 flex gap-8">
+        <div className="text-amber-50 flex gap-4 ">
           <Link
             to="/"
             className="hover:text-amber-400 transition duration-300"
@@ -26,14 +26,14 @@ const Navbar = () => {
 
           <Link
             to="/Collection"
-            className="hover:text-amber-400 transition duration-300"
+            className="hover:text-amber-400 transition duration-300 "
           >
             Our Collection
           </Link>
 
           <Link
             to="/Contact"
-            className="hover:text-amber-400 transition duration-300"
+            className="hover:text-amber-400 transition duration-300 px-4"
           >
             Contact
           </Link>

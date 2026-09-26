@@ -17,7 +17,7 @@ const App = () => {
   <Route path="/Collection" element={<Collection/>} />
   <Route path="/Contact" element={<Contact/>} />
 </Routes>
-<div className="hv-30 md:gap-30 justify-center bg-black flex text-amber-800 px-8">
+<div className="hv-30 grid grid-cols-3 justify-center bg-black  text-amber-800 px-">
   <div>
     <h1 className="font-bold text-2xl ">Wumight Scent</h1>
     <p>more just a fragrance. <br /> it's a life style </p>
@@ -57,7 +57,7 @@ const App = () => {
   <div>
   <h1>Get in Touch</h1>
   <p> <Phone  /> +234 803 659 0895</p>
-  <p> <Mail />wumihtscent@gmail.com</p>
+  <p> <Mail />wumihtscent <br />@gmail.com</p>
   <p><MapPin />Akugba, Nigeria.</p>
   </div>
 
