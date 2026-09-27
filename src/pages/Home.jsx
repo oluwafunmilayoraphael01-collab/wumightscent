@@ -13,7 +13,7 @@ const Home = () => {
         className="w-full h-[300px] bg-cover bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${perfumeBg})` }}
       >
-        <div className="bg-black/70 h-full px-5 ">
+        <div className="bg-black/70 h-full px-2 ">
 
           <p className="text-amber-500 tracking-[2px]">
             PREMIUM FRAGRANCES
