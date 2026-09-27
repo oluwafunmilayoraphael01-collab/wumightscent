@@ -105,8 +105,8 @@ const App = () => {
         </div>
 
         <div className="border-t text-amber-50 border-white px-5 py-4">
-          <div className="flex sm:flex-row items-center justify-center gap-2 text-center text-sm sm:text-base">
-            <div><Copyright size={18} /></div>
+          <div className="flex sm:flex-row items-center  gap-2 text-center text-sm sm:text-base">
+            <Copyright size={18} />
 
             <span>
               2026 SARA TECHNOLOGY ALL RIGHTS RESERVED
