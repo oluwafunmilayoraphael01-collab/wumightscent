@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin } from "lucide-react";
 import emailJS from "@emailjs/browser";
 import { useRef, useState } from "react";
@@ -33,12 +34,14 @@ const Contact = () => {
   };
 
   return (
-    <section className=" px-4 py-4 overflow-hidden">
-      <div className="max-w-xl mx-aut">
+    <section className="w-full px-4 sm:px-6 py-8 overflow-hidden">
+      <div className="max-w-6xl mx-auto">
 
-        <div className="grid  grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
 
-          <div className="w-full">
+          {/* LEFT - CONTACT FORM */}
+          <div className="w-full min-w-0">
+
             <h1 className="font-black text-3xl md:text-4xl">
               Contact Us
             </h1>
@@ -52,12 +55,13 @@ const Contact = () => {
               onSubmit={sendEmail}
               className="mt-6 w-full"
             >
+              {/* Name */}
               <input
                 type="text"
                 name="name"
                 placeholder="Enter Your Name"
                 required
-                className="border border-gray-300 w-full px-4 py-3 rounded-lg mb-4 outline-none focus:border-amber-400"
+                className="border border-gray-300 w-full max-w-full px-4 py-3 rounded-lg mb-4 outline-none focus:border-amber-400"
               />
 
               {/* Email */}
@@ -66,7 +70,7 @@ const Contact = () => {
                 name="email"
                 placeholder="Your Email"
                 required
-                className="border border-gray-300 w-full px-4 py-3 rounded-lg mb-4 outline-none focus:border-amber-400"
+                className="border border-gray-300 w-full max-w-full px-4 py-3 rounded-lg mb-4 outline-none focus:border-amber-400"
               />
 
               {/* Message */}
@@ -74,7 +78,7 @@ const Contact = () => {
                 required
                 name="message"
                 placeholder="Message"
-                className="border border-gray-300 w-full px-4 py-3 rounded-lg h-40 resize-none outline-none focus:border-amber-400"
+                className="border border-gray-300 w-full max-w-full px-4 py-3 rounded-lg h-40 resize-none outline-none focus:border-amber-400"
               />
 
               {/* Button */}
@@ -93,19 +97,21 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="">
+          {/* RIGHT - CONTACT DETAILS */}
+          <div className="w-full min-w-0">
 
+            {/* Phone */}
             <div className="flex gap-4 mb-6">
               <div className="text-amber-400 flex-shrink-0">
                 <Phone size={20} />
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <h2 className="font-black text-lg">
                   Phone / WhatsApp
                 </h2>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 break-words">
                   +234 803 659 0895
                 </p>
 
@@ -120,20 +126,21 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Email */}
             <div className="flex gap-4 mb-6">
-              <div className="text-amber-400 ">
+              <div className="text-amber-400 flex-shrink-0">
                 <Mail size={20} />
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <h2 className="font-black text-lg">
                   Email
                 </h2>
 
-                <p className="text-gray-600">
-                  wumightscent <br />@gmail.com
+                <p className="text-gray-600 break-words">
+                  wumightscent@gmail.com
                   <br />
-                  We'll reply within <br />24 hours
+                  We'll reply within 24 hours
                 </p>
               </div>
             </div>
@@ -144,7 +151,7 @@ const Contact = () => {
                 <MapPin size={20} />
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <h2 className="font-black text-lg">
                   Location
                 </h2>
@@ -156,10 +163,10 @@ const Contact = () => {
             </div>
 
             {/* Map */}
-            <div className="w-full">
+            <div className="w-full max-w-full overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9141160209324!2d5.74007650000001!3d7.474736200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104634a88357e003%3A0xa221e25abad811a0!2sAdekunle%20Ajasin%20University!5e0!3m2!1sen!2sng!4v1790313606974!5m2!1sen!2sng"
-                className="w-full md:h-64 rounded-lg border-0"
+                className="w-full h-56 sm:h-64 rounded-lg border-0"
                 loading="lazy"
                 title="WumiScent Location"
               ></iframe>
@@ -173,3 +180,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
