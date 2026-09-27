@@ -93,7 +93,7 @@ const App = () => {
                   </span>
                 </p>
 
-                <p className="flex items-start gap-3">
+                <p className="flex items-start ">
                   <MapPin className="shrink-0" />
                   <span>Akungba, Nigeria</span>
                 </p>
