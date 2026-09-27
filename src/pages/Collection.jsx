@@ -1,54 +1,138 @@
 import { perfumes } from "../data/cards";
 import perfumeBg from "../assets/perfumebg.jpg";
-import { TruckElectric, ShieldCheck, CreditCard,Phone   } from "lucide-react";
+import {
+  TruckElectric,
+  ShieldCheck,
+  CreditCard,
+  Phone,
+} from "lucide-react";
 
 const Collection = () => {
   return (
-    <div>
-      <div className="text-center font-bold text-2xl  hv-20 bg-contain bg-center bg-no-repeat "
-                    style={{ backgroundImage: `url(${perfumeBg})` }}>  <div className="bg-black/70 hv-16 ">
-                      <h1 className="text-3xl text-amber-600 font-extrabold">OUR COLLECTION</h1>
-            <p className="text-white">Find the Perfect fragrance for every mood, accassion and personality </p> </div> </div>
-      <div className=" md:flex justify-center grid grid-cols-2 py-3 gap-4 flex-wrap w-90 px-4 mt-8">
-      
-                {perfumes.map((perfume) => (
-                  <div
-                
-                    className="w-[160px] border hv-  rounded-lg overflow-hidden shadow-md  "
-                  >
-      
-                    <img
-                      src={perfume.image}
-                      alt={perfume.name}
-                      className=" h-[200px] object-cover object-cover object-top rounded-t-lg"
-                      
-      
-                    />
-      
-                    <div className="p-1">
-                      <h2 className="font-bold text-lg">
-                        {perfume.name}
-                      </h2>
-                       <button   className="inline-flex items-center gap-2  bg-black px-5  rounded-2xl text-amber-50 hover:bg-amber-400 transition  w-33"><a  href="https://wa.link/nfkm94" target="_blank"> Place Order</a></button>
-                    </div>
-      
-                  </div>
-                ))}
-      
-              </div>
-      <div className="bg-amber-950 px-3 flex  justify-between py-4 text-amber-50">
-        <div className="text-amber-50">
-          <h1 className="font-bold">Order Easily on WhatsApp</h1>
-          <p>Chat with Us now to place your Order or get expert Advise</p>
-          
-          <button   className="flex items-center gap-2  bg-green-400 px-5 py-2 rounded-2xl text-amber-50 hover:bg-amber-400 transition"><div className="grid gap-2"> <div><Phone /></div><div><a  href="https://wa.link/nfkm94" target="_blank">Chat On WhatsApp</a></div></div></button>
-        </div>
-        <div><div className="px-6 text-amber-400"><ShieldCheck /></div><h1>100% Original</h1></div>
-      <div><div className="px-6 text-amber-400"><TruckElectric /></div><p>Fast Delivery</p></div>
-      <div><div className="px-6 text-amber-400"><CreditCard /></div><p>Secure Payment</p></div>
-      </div>
-    </div>
-  )
-}
+    <div className="w-full overflow-hidden">
 
-export default Collection
+      {/* HERO */}
+      <section
+        className="w-full min-h-[180px] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${perfumeBg})` }}
+      >
+        <div className="w-full min-h-[180px] bg-black/70 flex flex-col items-center justify-center text-center px-4">
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-amber-600 font-extrabold">
+            OUR COLLECTION
+          </h1>
+
+          <p className="text-white text-base sm:text-lg md:text-xl mt-3 max-w-2xl">
+            Find the perfect fragrance for every mood, occasion and personality.
+          </p>
+
+        </div>
+      </section>
+
+      {/* PERFUME CARDS */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+
+          {perfumes.map((perfume) => (
+            <div
+              key={perfume.name}
+              className="w-full border border-gray-300 rounded-lg overflow-hidden shadow-md bg-white"
+            >
+
+              {/* IMAGE */}
+              <img
+                src={perfume.image}
+                alt={perfume.name}
+                className="w-full h-[180px] sm:h-[200px] object-cover object-top"
+              />
+
+              {/* CARD CONTENT */}
+              <div className="p-3">
+
+                <h2 className="font-bold text-base sm:text-lg min-h-[48px]">
+                  {perfume.name}
+                </h2>
+
+                <a
+                  href="https://wa.link/nfkm94"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 block w-full text-center bg-black px-3 py-2 rounded-2xl text-white hover:bg-amber-400 transition"
+                >
+                  Place Order
+                </a>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      <section className="w-full bg-amber-950 text-white">
+
+        <div className="w-full max-w-2xl mx-auto px-1 sm:px-6 py-8">
+
+          <div className="flex  sm:grid-cols-2 md:grid-cols-4 gap-3">
+
+            <div className="sm:col-span-2 md:col-span-1">
+
+              <h2 className="font-bold text-xl">
+                Order Easily on WhatsApp
+              </h2>
+
+              <p className="mt-2 text-sm sm:text-base">
+                Chat with us now to place your order or get expert advice.
+              </p>
+
+              <a
+                href="https://wa.link/nfkm94"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 bg-green-500 px-5 py-3  rounded-2xl hover:bg-green-600 transition"
+              >
+                <Phone size={20} />
+                <span>Chat On WhatsApp</span>
+              </a>
+
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <ShieldCheck className="text-amber-400" size={20} />
+
+              <h3 className="font-bold mt-2">
+                100% Original
+              </h3>
+            </div>
+
+            {/* DELIVERY */}
+            <div className="flex flex-col items-center text-center">
+              <TruckElectric className="text-amber-400" size={20} />
+
+              <h3 className="font-bold mt-2">
+                Fast Delivery
+              </h3>
+            </div>
+
+            {/* PAYMENT */}
+            <div className="flex flex-col items-center text-center">
+              <CreditCard className="text-amber-400" size={20} />
+
+              <h3 className="font-bold mt-2">
+                Secure Payment
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  );
+};
+
+export default Collection;
