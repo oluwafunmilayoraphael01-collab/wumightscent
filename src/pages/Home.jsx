@@ -24,7 +24,7 @@ const Home = () => {
             Signature Scent
           </h1>
 
-          <p className="text-white mt-4">
+          <p className="text-white md:mt-4">
             Luxury perfume for every moment.
             <br />
             Find the scent that tells your story.
