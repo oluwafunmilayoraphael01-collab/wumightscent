@@ -104,8 +104,8 @@ const App = () => {
           </div>
         </div>
 
-        <div className="border-t border-amber-800 px-5 py-4">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-sm sm:text-base">
+        <div className="border-t text-amber-50 border-white px-5 py-4">
+          <div className="flex sm:flex-row items-center justify-center gap-2 text-center text-sm sm:text-base">
             <Copyright size={18} />
 
             <span>

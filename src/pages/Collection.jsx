@@ -55,7 +55,7 @@ const Collection = () => {
                 </h2>
 
                 <a
-                  href="https://wa.link/nfkm94"
+                  href="https://wa.link/75y3aw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 block w-full text-center bg-black px-3 py-2 rounded-2xl text-white hover:bg-amber-400 transition"
@@ -73,9 +73,9 @@ const Collection = () => {
 
       <section className="w-full bg-amber-950 text-white">
 
-        <div className="w-full max-w-2xl mx-auto px-1 sm:px-6 py-8">
+        <div className="w-full max-w-2xl mx-auto px- sm:px-6 py-8">
 
-          <div className="flex  sm:grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="flex  sm:grid-cols-2 md:grid-cols-4 gap-1">
 
             <div className="sm:col-span-2 md:col-span-1">
 
@@ -88,7 +88,7 @@ const Collection = () => {
               </p>
 
               <a
-                href="https://wa.link/nfkm94"
+                href="https://wa.link/75y3aw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-2 bg-green-500 px-5 py-3  rounded-2xl hover:bg-green-600 transition"
@@ -98,7 +98,7 @@ const Collection = () => {
               </a>
 
             </div>
-
+<div className="flex">
             <div className="flex flex-col items-center text-center">
               <ShieldCheck className="text-amber-400" size={20} />
 
@@ -124,7 +124,7 @@ const Collection = () => {
                 Secure Payment
               </h3>
             </div>
-
+</div>
           </div>
 
         </div>
