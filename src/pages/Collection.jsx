@@ -81,7 +81,7 @@ Please confirm availability and price.
 Thank you! ❤️
     `;
 
-    const whatsappURL = `https://wa.link/75y3aw?text=${encodeURIComponent(
+    const whatsappURL = `https://wa.me/2348026590895?text=${encodeURIComponent(
       message
     )}`;
 
