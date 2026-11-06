@@ -1,85 +1,124 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  return (
-    <nav className="w-full bg-black">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="flex items-center justify-between min-h-16">
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/About" },
+    { name: "Our Collection", path: "/Collection" },
+    { name: "Contact", path: "/Contact" },
+  ];
+
+  const linkStyle = ({ isActive }) =>
+    `transition duration-300 ${
+      isActive
+        ? "text-amber-400"
+        : "text-white hover:text-amber-400"
+    }`;
+
+  const handleNavigation = (path) => {
+    setMenuOpen(false);
+
+    if (path === "/") {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <nav className="w-full bg-[#171513] text-white sticky top-0 z-50 shadow-lg shadow-black/20">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+
+        <div className="flex items-center justify-between min-h-20">
 
           {/* LOGO */}
           <Link
             to="/"
-            className="font-bold text-blue-500 text-lg sm:text-xl"
+            onClick={() => handleNavigation("/")}
+            className="font-serif font-bold text-amber-400 text-lg sm:text-2xl tracking-wide"
           >
-            WUMIGHT SCENT
+            WUMIGHT COLLECTION
           </Link>
 
-          {/* DESKTOP / TABLET LINKS */}
-          <div className="hidden md:flex items-center gap-5 lg:gap-8 text-amber-50">
-
-            <Link
-              to="/"
-              className="hover:text-amber-400 transition duration-300"
-            >
-              HOME
-            </Link>
-
-            <Link
-              to="/About"
-              className="hover:text-amber-400 transition duration-300"
-            >
-              About
-            </Link>
-
-            <Link
-              to="/Collection"
-              className="hover:text-amber-400 transition duration-300"
-            >
-              Our Collection
-            </Link>
-
-            <Link
-              to="/Contact"
-              className="hover:text-amber-400 transition duration-300"
-            >
-              Contact
-            </Link>
-
+          {/* DESKTOP NAVIGATION */}
+          <div className="hidden md:flex items-center gap-7 lg:gap-10 text-sm font-medium tracking-wide">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={link.path === "/"}
+                onClick={() => handleNavigation(link.path)}
+                className={linkStyle}
+              >
+                {link.name}
+              </NavLink>
+            ))}
           </div>
 
-          {/* MOBILE MENU */}
-          <div className="flex md:hidden items-center gap-3 text-sm text-amber-50">
+          {/* DESKTOP ORDER BUTTON */}
+          <a
+            href="https://wa.link/75y3aw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center justify-center bg-amber-400 text-black px-5 py-3 text-sm font-semibold hover:bg-white transition duration-300"
+          >
+            Order Now
+          </a>
 
-            <Link
-              to="/"
-              className="hover:text-amber-400"
-            >
-              HOME
-            </Link>
-
-            <Link
-              to="/About"
-              className="hover:text-amber-400"
-            >
-              About
-            </Link>
-
-            <Link
-              to="/Collection"
-              className="hover:text-amber-400"
-            >
-              Collection
-            </Link>
-<Link
-              to="/Contact"
-              className="hover:text-amber-400 transition duration-300"
-            >
-              Contact
-            </Link>
-          </div>
+          {/* MOBILE MENU BUTTON */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-amber-400 p-2"
+            aria-label={
+              menuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={27} /> : <Menu size={27} />}
+          </button>
 
         </div>
+
+        {/* MOBILE NAVIGATION */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-white/10 py-5">
+            <div className="flex flex-col gap-5 text-sm font-medium tracking-wide">
+
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  end={link.path === "/"}
+                  onClick={() => handleNavigation(link.path)}
+                  className={linkStyle}
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+
+              <a
+                href="https://wa.link/75y3aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="bg-amber-400 text-black text-center py-3 font-semibold hover:bg-white transition"
+              >
+                Order Now
+              </a>
+
+            </div>
+          </div>
+        )}
+
       </div>
     </nav>
   );
