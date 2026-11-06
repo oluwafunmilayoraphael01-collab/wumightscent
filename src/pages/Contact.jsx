@@ -183,7 +183,7 @@ const Contact = () => {
                 </h3>
 
                 <p className="text-gray-600 mt-1">
-                  +234 803 659 0895
+                  +234 802 659 0895
                 </p>
 
                 <a

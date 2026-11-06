@@ -119,7 +119,7 @@ const App = () => {
 
                 <p className="flex items-start gap-3 break-words">
                   <Phone className="shrink-0" size={20} />
-                  <span>+234 803 659 0895</span>
+                  <span>+234 802 659 0895</span>
                 </p>
 
                 <p className="flex items-start gap-3 break-all">
